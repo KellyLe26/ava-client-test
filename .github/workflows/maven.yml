@@ -29,5 +29,8 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
+      - name: Verify Maven auth
+        run: mvn help:effective-settings
+
       - name: Deploy to GitHub Packages
         run: mvn deploy
