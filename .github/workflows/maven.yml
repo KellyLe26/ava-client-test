@@ -3,27 +3,31 @@ name: Build and Deploy Maven SDK
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - 'v*.*.*'  # Deploy only on version tags
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout repository
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      # 2️⃣ Set up Java 11 with Maven credentials
       - name: Set up JDK 11
         uses: actions/setup-java@v3
         with:
           distribution: temurin
           java-version: 11
-          server-id: github
+          server-id: github                  # MUST match <id> in pom.xml
           server-username: ${{ github.actor }}
           server-password: ${{ secrets.GITHUB_TOKEN }}
 
+      # 3️⃣ Build Maven project
       - name: Build with Maven
         run: mvn clean install
 
+      # 4️⃣ Deploy to GitHub Packages
       - name: Deploy to GitHub Packages
         run: mvn deploy

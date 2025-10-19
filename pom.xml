@@ -6,7 +6,7 @@
 
     <groupId>com.github.KellyLe26</groupId>
     <artifactId>ava-client</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <name>Ava Web API Client SDK</name>
