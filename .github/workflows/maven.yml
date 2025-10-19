@@ -3,7 +3,7 @@ name: Build and Deploy Maven SDK
 on:
   push:
     branches:
-      - main  # only runs on commits to main
+      - main
 
 jobs:
   build-and-deploy:
