@@ -22,7 +22,7 @@ jobs:
           java-version: 11
           server-id: github                  # MUST match <id> in pom.xml
           server-username: ${{ github.actor }}
-          server-password: ${{ secrets.GITHUB_TOKEN }}
+          server-password: ${{ secrets.PERSONAL_GITHUB_TOKEN  }}
 
       # 3️⃣ Build Maven project
       - name: Build with Maven
@@ -31,5 +31,3 @@ jobs:
       # 4️⃣ Deploy to GitHub Packages
       - name: Deploy to GitHub Packages
         run: mvn deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
