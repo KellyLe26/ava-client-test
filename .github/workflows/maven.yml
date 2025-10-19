@@ -24,7 +24,7 @@ jobs:
           java-version: 11
           server-id: github
           server-username: ${{ github.actor }}
-          server-password: ${{ secrets.maven-publish-token }}
+          server-password: ${{ secrets.GH_PACKAGES_TOKEN }}
 
       - name: Build with Maven
         run: mvn clean install
