@@ -31,3 +31,5 @@ jobs:
       # 4️⃣ Deploy to GitHub Packages
       - name: Deploy to GitHub Packages
         run: mvn deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
