@@ -12,8 +12,7 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      GH_PACKAGES_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -24,7 +23,7 @@ jobs:
           distribution: temurin
           java-version: 11
 
-      - name: Write temporary Maven settings
+      - name: Write Maven settings
         run: |
           mkdir -p $HOME/.m2
           cat > $HOME/.m2/settings.xml <<EOF
@@ -32,8 +31,8 @@ jobs:
             <servers>
               <server>
                 <id>github</id>
-                <username>${env.GITHUB_ACTOR}</username>
-                <password>${env.GH_PACKAGES_TOKEN}</password>
+                <username>${{ github.actor }}</username>
+                <password>${{ secrets.GH_PACKAGES_TOKEN }}</password>
               </server>
             </servers>
           </settings>
@@ -46,4 +45,4 @@ jobs:
         run: mvn help:effective-settings
 
       - name: Deploy to GitHub Packages
-        run: mvn deploy -X
+        run:  mvn deploy -X
