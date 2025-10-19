@@ -1,0 +1,14 @@
+ava\client\ApiConstants.class
+ava\client\IAvaHttpClient.class
+ava\client\IAvaHttpRequest.class
+ava\client\AvaSettings.class
+ava\client\IAvaApiClient$IAvaApiClientV3.class
+ava\client\IAvaApiClient.class
+ava\client\AvaHttpClient.class
+ava\client\AvaApiClient$AvaApiClientV3.class
+ava\client\AvaApiClient.class
+ava\client\ManifestV3GetGlobalHashGetRequest.class
+ava\client\ManifestV3ApiService.class
+ava\client\IAvaHttpRequest$HttpMethod.class
+ava\client\IManifestV3ApiService.class
+ava\client\AvaClientSettings.class
