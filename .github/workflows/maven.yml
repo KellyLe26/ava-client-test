@@ -2,8 +2,8 @@ name: Build and Deploy Maven SDK
 
 on:
   push:
-    tags:
-      - 'v*.*.*'  # Deploy only on version tags
+    branches:
+      - main  # only runs on commits to main
 
 jobs:
   build-and-deploy:
