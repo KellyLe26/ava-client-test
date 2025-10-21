@@ -1,5 +1,7 @@
 package ava.client;
 
+import ava.client.services.IManifestV3ApiService;
+
 public interface IAvaApiClient {
     IAvaApiClientV3 getV3();
 

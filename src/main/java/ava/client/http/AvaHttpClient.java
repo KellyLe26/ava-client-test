@@ -1,4 +1,4 @@
-package ava.client;
+package ava.client.http;
 
 import java.io.IOException;
 import java.net.URI;
@@ -11,6 +11,9 @@ import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
+
+import ava.client.models.AvaClientSettings;
+import ava.client.models.requests.IAvaHttpRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class AvaHttpClient implements IAvaHttpClient, AutoCloseable {

@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>github.KellyLe26</groupId>
+    <groupId>github</groupId>
     <artifactId>ava-client</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.9</version>
     <packaging>jar</packaging>
 
     <name>Ava Web API Client SDK</name>
@@ -50,7 +50,6 @@
             <name>ava client</name>
             <url>https://maven.pkg.github.com/KellyLe26/ava-client-test</url>
         </repository>
-
     </distributionManagement>
 
 </project>

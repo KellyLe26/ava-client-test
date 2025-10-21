@@ -1,4 +1,4 @@
-package ava.client;
+package ava.client.models;
 
 public class AvaSettings {
 

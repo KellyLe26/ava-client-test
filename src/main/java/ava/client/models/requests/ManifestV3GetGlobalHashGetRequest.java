@@ -1,9 +1,12 @@
-package ava.client;
+package ava.client.models.requests;
+
+import ava.client.constants.ApiConstants;
+import ava.client.models.AvaSettings;
 
 import java.util.Collections;
 import java.util.Map;
 
-public class ManifestV3GetGlobalHashGetRequest implements  IAvaHttpRequest {
+public class ManifestV3GetGlobalHashGetRequest implements IAvaHttpRequest {
 
     private final String userId;
     private final String dabInAppId;

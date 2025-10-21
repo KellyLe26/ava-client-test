@@ -1,7 +1,8 @@
-package ava.client;
+package ava.client.http;
+
+import ava.client.models.requests.IAvaHttpRequest;
 
 import java.net.URI;
-import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 /**
