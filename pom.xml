@@ -4,19 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>github</groupId>
-        <artifactId>ava-client-new</artifactId>
-        <version>1.0.0</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
-
-<!--    <groupId>github</groupId>-->
+    <groupId>github</groupId>
     <artifactId>ava-client</artifactId>
     <version>1.1.1</version>
-<!--    <version>${project.version}</version>-->
     <packaging>jar</packaging>
-<!--    <packaging>jar</packaging>-->
 
     <name>Ava Web API Client SDK</name>
     <description>Reusable client library for Ava Web API</description>
@@ -44,6 +35,12 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.15.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>2.15.2</version> <!-- match your Jackson version -->
         </dependency>
 
         <!-- Protobuf runtime -->
@@ -77,12 +74,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-<!--    <distributionManagement>-->
-<!--        <repository>-->
-<!--            <id>github</id>-->
-<!--            <name>ava client</name>-->
-<!--            <url>https://maven.pkg.github.com/KellyLe26/ava-client-test</url>-->
-<!--        </repository>-->
-<!--    </distributionManagement>-->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>ava client</name>
+            <url>https://maven.pkg.github.com/KellyLe26/ava-client-test</url>
+        </repository>
+    </distributionManagement>
 
 </project>
