@@ -24,7 +24,7 @@ public class AvaApiClient implements IAvaApiClient, AutoCloseable {
 
         // Initialize V3 client
         this.v3 = new AvaApiClientV3(
-                new ManifestV3ApiService(httpClient, settings)
+                new ManifestV3ApiService(httpClient, settings,null)
         );
     }
 
@@ -65,18 +65,6 @@ public class AvaApiClient implements IAvaApiClient, AutoCloseable {
         }
     }
 }
-
-
-
-//public class AvaApiClient implements IAvaApiClient, AutoCloseable {
-//
-//
-//    // -----------------------------
-//    // Inner class for V3
-//    // -----------------------------
-
-//    }
-//}
 
 
 
